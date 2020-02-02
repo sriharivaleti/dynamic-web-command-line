@@ -8,7 +8,10 @@
   "scripts": {
     "test": "grunt test",
     "start": "grunt serve",
-    "build": "grunt"
+    "clean": "rimraf dist/ && mkdir dist",
+    "build": "grunt",
+    "postbuild": "cp -R css js lib plugin dist/ && cp index.html dist/",
+    "deploy": "gh-pages -d dist"
   },
   "author": {
     "name": "Hakim El Hattab",
