@@ -10,7 +10,7 @@
     "start": "grunt serve",
     "clean": "rimraf dist/ && mkdir dist",
     "build": "grunt",
-    "postbuild": "cp -R css js lib plugin dist/ && cp index.html dist/",
+    "postbuild": "cp -R css js assets/images lib plugin dist/ && cp index.html dist/",
     "deploy": "gh-pages -d dist"
   },
   "author": {
