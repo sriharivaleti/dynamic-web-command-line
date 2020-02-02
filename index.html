@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>COMD3663 Dynamic Web 1: Command Line</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section class="section">
+                <h1>Dynamic Web 1: Command Line</h1>
+            </section>
+            <section class="section">
+                <h2 class="capitalize">Command Line</h2>
+                <p>In the nutshell, the <code>Command Line</code> provides you with the means to <em>control</em> your
+                    entire
+                    computer from a
+                    little window called the <code>Command Line Interface</code> on your computer. <code>Terminal</code>
+                    is the
+                    software that
+                    hosts your
+                    Command
+                    Line Interface, and <code>Xcode Command Line Tools</code> are what permit you to do your magic
+                    within the <code>Command
+                        Line</code>. There is so much underneath the hood when using GUIs to get around your computer
+                    that you
+                    <em>miss</em>.
+                    The <code>Command Line</code> <em>reveals all</em>.</p>
+            </section>
+            <section class="section">
+                <h2 class="capitalize">Where <code>Terminal/CommandLine</code> Lives</h2>
+                <p>To launch <code>Terminal</code>, all you need to do is go into your <code>Spotlight Search</code> in
+                    the top right
+                    of your
+                    computer screen, <code>click</code> anywhere on the <code>desktop</code>, and hit the <code>space
+                        bar</code> on
+                    your keyboard.
+                    The
+                    <code>Apple menu
+                        bar</code>
+                    will then appear, and all the way to the right you will find a <code>magnifying glass
+                        icon</code> (aka <code>search
+                        icon</code>). Click the <code>command key</code> on your <code>keyboard</code> and then the
+                    <code>
+                        space bar</code> again. <code>Spotlight
+                    </code>
+                    will pop up.
+                    In
+                    the <code>Spotlight</code> search bar, type <code>Terminal</code>, and it will pop up. Click on the
+                    <code>Terminal</code>
+                    icon, and it will launch. You're good to go!</p>
+            </section>
+            <section class="section">
+                <h2 class="capitalize">Accessing The Search Bar Directly</h2>
+                <p>You can simply hover over the top right of your computer screen, and the <code>Apple menu</code> will
+                    show up
+                    with the <code>magnifying glass/search icon</code> right there. <em>Click</em> on the <code>search
+                        icon</code>,
+                    and <em>type</em>
+                    <code>Terminal</code>. When
+                    <code>Terminal</code> appears, <em>click</em> on the first icon that
+                    appears in the
+                    list with the <em>word</em> <code>Terminal</code> next to it, or
+                    hit enter, and an instance of the window will appear. You are good to go!</p>
+            </section>
+            <section class="section">
+                <h2 class="lowercase">The <code>pwd</code> command</h2>
+                The first thing you probably want to do in <code>Terminal</code> is to find out what directory (aka
+                folder) you are
+                in. Type the following command in <code>Terminal</code> and then hit the enter key:
+                <pre><code data-shell noescape>pwd</code></pre>
+                <p><code>pwd</code> stands for <code>print working directory</code>. It prints out the directory that
+                    you are in.</p>
+            </section>
+            <section class="section">
+                <h2 class="lowercase"><code>pwd</code></h2>
+                <p>When I type <code>pwd</code> in Terminal, the following is printed out to the <code>Terminal</code>
+                    console:</p>
+                <pre><code data-shell noescape>
+/Users/mariacam
+</code></pre>
+                <p>Terminal is telling me that I am in the home directory on my computer.</p>
+            </section>
+            <section class="section" data-background-image="assets/images/terminal-screenshot.png"
+                data-background-size="cover" data-background-position=" center center">
+            </section>
+            <section class="section">
+                <h2 class="capitalize">Breaking down the Terminal window</h2>
+                <p>Remember the little squiggly line which I called <code>tilde</code> (<code>~</code>)?
+                    (<code>~</code>)
+                    refers to the home directory. From whichever directory on your computer you are in, you can simply
+                    hit the <code>shift key</code> followed by (<code>~</code>) in <code>Terminal</code>, and it will
+                    take
+                    you to your home directory. Do NOT confuse (<code>~</code>) with <code>backtick</code>
+                    (<code>`</code>). They reside in the same key on the keyboard, but they are two <em>totally
+                        different</em> things. One is mostly used in the <code>Command Line</code>, and the other is
+                    used <em>very often</em>
+                    in <code>JavaScript development</code>. If you read the <code>slide deck</code> on <code>Template
+                        literals</code>, you know
+                    what I am
+                    referring to. To type a (<code>`</code>), you simply hit the key right below the <code>esc
+                        key</code>
+                    where (<code>~</code>) resides <em>without</em> hitting the <code>shift key</code> first.
+                </p>
+            </section>
+            <section class="section">
+                <h2 class="capitalize">Always have a space between a command and what follows it!</h2>
+                <p>Even though <code>Terminal commands</code> may not be human readable words, they still should be
+                    treated as
+                    words, and <code>words</code> are <code>followed by</code> a <code>space</code>. So don't forget to
+                    <code>make a space</code>
+                    between a
+                    <code>command</code> and <em>what
+                        follows</em>. If you are executing the <code>cd</code> command followed by the
+                    <code>directory</code> you
+                    want to
+                    <code>change</code> to, make sure to <code>make a space</code> between it and what follows.
+                    <code>Terminal</code>
+                    will not
+                    understand it
+                    and will fail to execute!</p>
+            </section>
+            <section class="section">
+                <h2 class="lowercase">the <code>cd</code> command</h2>
+                <p>The <code>cd</code> command stands for <code>change directory</code>. To change directories, type
+                    <code>cd</code> followed by the <code>path</code> to that directory. For instance, if I want to go
+                    from my <code>home directory</code> into a directory on my <code>desktop</code> called
+                    <code>desktop-folder</code>, I would
+                    type the following in <code>Terminal</code> and then hit the <code>enter key</code>:</p>
+                <pre><code data-shell noescape>
+~/desktop/desktop-folder
+                </code></pre>
+                <p>Then, if I type <code>pwd</code>, the following will print out to <code>Terminal</code>:</p>
+                <pre><code data-shell noescape>
+/Users/mariacam/desktop/desktop-folder
+                </code></pre>
+            </section>
+            <section class="section">
+                <h2 class="lowercase"><code>mkdir</code> command</h2>
+                <pre><code data-shell noescape>
+mkdir foldername
+                </code></pre>
+                <code>mkdir</code> followed by the <code>name</code> of the <code>folder</code> you want to create,
+                creates a new
+                folder within
+                the <code>current directory</code> you are in. Whenever you create anything, whether it be a folder,
+                file, etc., make
+                sure that you actually want to place the file or folder within that location.
+            </section>
+            <section class="section">
+                <h2 class="capitalize">Creating two folders at once with <code>mkdir</code></h2>
+                <p>If you want to create an assets folder that contains an images folder, in order to do
+                    so, you have to type the following command and then hit the return key:</p>
+                <pre><code data-shell noescape>
+mkdir -p assets/images
+                </code></pre>
+                <p>This will create a new folder called assets with a folder inside it called images. However, you
+                    cannot create these same two directories at once without <code>-p</code>. Known as the <code>-p
+                        switch</code>, <code>-p</code> creates a <code>parent directory</code> in which a
+                    <code>subdirectory(s)</code> can be
+                    created at the
+                    same time.</p>
+            </section>
+            <section class="section">
+                <h2 class="capitalize">The <code>touch</code>command</h2>
+                <p>The <code>touch</code> command creates a new file.</p>
+                <pre><code data-shell noescape>
+touch index.html
+                </code></pre>
+                <p><code>touch index.html</code> creates a <em>new</em> <code>index.html</code> file in your current
+                    directory.</p>
+            </section>
+            <section class="section">
+                <h2 class="capitalize">The <code>ls</code> command</h2>
+                <code>ls</code> stands for <code>list files</code>, and it does just that. It will <em>list</em> all the
+                files AND
+                directories within your current directory.
+            </section>
+            <section class="section" data-background-image="assets/images/ls-command.png" data-background-size="cover"
+                data-background-position="bottom left">
+            </section>
+            <section class="section">
+                <h2 class="capitalize">Terminal (<code>iTerm2</code> + <code>ZSH</code>) Syntax Highlighting</h2>
+                <p>The result of executing the <code>ls</code> command results in <code>pink</code> and white. The
+                    <code>pink</code>
+                    indicates
+                    files, and the
+                    white indicates folders. <code>Syntax highlighting</code> depends on which <code>Command Line
+                        Interface</code>
+                    program or
+                    <code>theme</code> you are using, especially if the <code>Interface</code> has been
+                    <code>customized</code>. The image in the previous slide
+                    represents the
+                    <code></code> <code>Terminal program</code> along with a <code>customized </code>
+                    <code>ZShell</code>, aka
+                    <code>ZSH</code>.
+                </p>
+            </section>
+            <section class="section">
+                <h2 class="lowercase">The <code>ls -a</code> command</h2>
+                <p>The <code>ls -a</code> command lists all the files and directories in the current directory, AND all
+                    the (<code>.</code>) files and directories. (<code>.</code>) files are hidden files, and can only be
+                    seen with the ls -a command. They are not viewable in the Finder GUI, and it takes a lot of effort
+                    to find out whether there are any hidden files or folders anywhere at all.</p>
+            </section>
+            <section class="section">
+                <h2 class="capitalize">Related Resources</h2>
+                <ul>
+                    <li><a href="https://www.davidbaumgold.com/tutorials/command-line/#what-is-the-command-line?">What
+                            Is the Command Line?</a>: <strong>David Baumgold</strong>
+                    </li>
+                    <li><a
+                            he="https://unix.stackexchange.com/questions/84191/how-to-create-nested-directory-in-a-single-command">
+                            How to create nested directory in a single command?</a>: <strong>Unix & Linux</strong></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script src="js/reveal.js">
+    </script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            hash: true,
+            dependencies: [{
+                    src: 'plugin/markdown/marked.js'
+                },
+                {
+                    src: 'plugin/markdown/markdown.js'
+                },
+                {
+                    src: 'plugin/highlight/highlight.js'
+                },
+                {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                }
+            ]
+        });
+    </script>
+</body>
+
+</html>
